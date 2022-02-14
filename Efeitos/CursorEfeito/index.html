@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Portifolio</a></li>
+    <li><a href="#">Time</a></li>
+    <li><a href="#">Contato</a></li>
+    <div class="cursor"></div>
+    </ul>
+    <script>
+        const cursor = document.querySelector('.cursor')
+        document.addEventListener('mousemove', (e) =>{
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        })
+    </script>
+</body>
+</html>

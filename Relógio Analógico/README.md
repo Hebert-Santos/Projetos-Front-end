@@ -1,0 +1,1 @@
+Um relógio analógico desenvolvido utilizando Javascript e CSS. O horário do relógio é definido conforme o horário do cliente.

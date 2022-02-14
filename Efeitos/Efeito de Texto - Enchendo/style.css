@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252839;
+    flex-direction: column-reverse;
+}
+
+h2, h3{
+    position: relative;
+    font-size: 10vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;/*Instável*/
+    text-transform: uppercase;
+}
+
+h3{
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;/*Instável*/
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    color: #01fe87;
+    border: 5px solid #383d52;
+    border-radius: 10px;
+    padding: 120px 180px;
+}
+
+.form label{
+    font-size: 3.6vw;
+}
+
+.form input{
+    font-size: 2.6vw;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.form input:focus{
+    outline: 0;
+}
+
+.form button{
+    background-color: #01fe87;
+    border: none;
+    color: #252839;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6vw;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.form button:hover{
+    transform: translateY(-4px);
+}
+
+.form button:active{
+    transform: translateY(8px);
+}
+
+
+.hidden{
+    display: none;
+}
+
+::placeholder{
+    opacity: 0.4;
+}
+
+@keyframes animate {
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}

@@ -1,0 +1,1 @@
+Um buscador de informações de localidade através da consulta do CEP do cliente. O processo inverso também é possível, ou seja, a consulta do CEP do cliente através da localidade em que este reside. A consulta do CEP é feita através da API do ViaCEP.

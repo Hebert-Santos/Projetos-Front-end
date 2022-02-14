@@ -1,1 +1,0 @@
-Uma calculadora em Javascript com foco em cálculos voltados a área de eletricidade.

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,900;1,200&display=swap');
+
+/*  IMG FONTS
+https://www.pexels.com/pt-br/foto/foto-de-mulher-em-um-campo-de-girassol-906002/
+https://www.pexels.com/pt-br/foto/sozinho-solitario-vista-traseira-meio-ambiente-4846154/
+https://www.pexels.com/pt-br/foto/par-de-sapatos-cinza-955241/
+falta 1
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url('./menu.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #000;
+}
+
+.slider .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0s;
+    z-index: 1;
+    clip-path: circle(0px at center); /*https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path*/
+}
+
+.slider input[type="radio"]:checked +.imgBx {
+    z-index: 10;
+    clip-path: circle(4000px at center);
+    transition-delay: 0.75s;
+}
+
+.slider .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.slider .imgBx .content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+}
+
+.slider .imgBx .content h2 {
+    font-size: 6em;
+    line-height: 1em;
+    color: #fff;
+}
+
+.slider .imgBx .content p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.slider .imgBx .content a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 10px 30px;
+    color: #111;
+    font-weight: 400;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.slider input[type="radio"] {
+    position: relative;
+    z-index: 1000;
+    margin: 5px;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .slider .imgBx{
+        padding: 40px;
+    }
+
+    .slider .imgBx .content h2{
+        font-size: 3em;
+    }
+
+    .slider .imgBx .content p{
+        font-size: 1em;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Cep by HebertDev</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAXVBMVEX///8AAAAwMDAODg6lpaXMzMw6OjqysrKGhobCwsL7+/vg4OB0dHS/v7/29vbb29tVVVVhYWEVFRWMjIxQUFDs7OyAgICgoKAsLCzS0tIMDAxtbW2VlZW0tLQ1NTVVe0b4AAACk0lEQVR4nO3di3LTMBBAUeOkplD8NqQtkP//zNLpQGdslfWuBCur93yAR3ek+JU2qioAAAAAAAAAAICj6dp5aOocNMPcdsn72uVDXpY2bd/VOyjgPl1jN3rHvGFMtFb7ybvkTVOfIvDGO+OvbuIDe+8GQfQsdvku0RdT7Gcx15PMqzEusPUe/w5xF43ae/g7XEufwrhJzO1WLWyxB3beY9/Jfjo9xiKNWaaz99B3ms2Fg/fQdxrMhY330HdqzIWBq+F00njcHuBRdYCAwG1knbDwpDvAw3Y0Z/NofjvlVBh48qJQRqEGhSIKTSjUoFBEoQmFGhSKKDShUINCUfmF/fcvaz9+flz7qjtoVoUB5+20Kr/lpFCDQgsKZRRqUGhBoYxCDQotKJRRqEGhBYUyCjWiC+++3a6dP621R36LUf6bKApNKNSgUEShCYUaFIooNKFQg0IRhSYUalAoChReqs9rylFlVdjdbVzqZuX+QXfQrAoDCnsTFUChjEINCi0olFGoQaEFhTIKNSi0oFBGoQaFovKf8ct/T/Mu37VRKKNQg0IRhSYUalAootCEQg0KRRSaUKhBoaj8/7cIKOxNVACFMgo1KLSgUEahBoUWFMoo1KDQgkIZhRoUWlyKL+w3P31Z2m9fxqNQg0IfFGpQ6INCDQp9UKhBoQ8KNSj0QaHGeyxU7kP6LyTdh7T8vWTL3w+4/D2dy9+Xu/y91avFe+y7LPbAgyxT+yL95eo9+h2uMYGHmMSoKayq0Xv8ojEusOoCN0lZmSJOpC967wRBHxsY/FvtjCi/XQ3r812oU4IZfNbleroZoz+Df7Q5PkfVkZeJdWNuT1JL2r5nXTsPTZ2DZpjbdOsTAAAAAAAAAADgf3kC00hM0GgwqRwAAAAASUVORK5CYII=" type="image/png">
+</head>
+
+<!--Colocar a API do Google Maps no Futuro-->
+
+<body>
+    <main>
+        <div class="titulo">
+            <h1>Bem-Vindo ao Consulta CEP</h1>
+            <span class="legenda">Conectando você a sua cidade</span>
+        </div>
+        <div class="conteudo">
+            <form action="#">
+                <label for="cepInput">Insira o CEP</label> <br>
+                <input type="number" name="cepInput" id="cepInput" placeholder="Ex: 38051301" />
+                <br>
+                <button type="submit">Consultar</button>
+                <button class="procuraCep">Não sei o meu CEP</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="achaCep hidden">
+        <div class="titulo">
+            <h1>Bem-Vindo ao Procura CEP</h1>
+            <span class="legenda">Conectando você ao seu CEP</span>
+        </div>
+        <div class="conteudo">
+            <form action="#">
+                <div class="labelBox">
+                    <label for="cidadeInput">Insira a sua Cidade</label>
+                    <input
+                    type="text" 
+                    name="cidadeInput" 
+                    id="cidadeInput" 
+                    class="cidadeInput"
+                    placeholder="Ex: Uberaba">
+                </div>
+                <div class="labelBox">
+                    <label for="ufInput">Insira o Estado (UF)</label>
+                    <input 
+                    type="text"
+                    name="ufInput" 
+                    id="ufInput" 
+                    size="10"
+                    class="ufInput"
+                    placeholder="Ex: MG"
+                    >
+                </div>
+                <label for="ruaInput">Insira a sua Rua</label>
+                <input 
+                type="text" 
+                name="ruaInput"
+                id="ruaInput"
+                size="30"
+                class="ruaInput"
+                placeholder="Ex: Francisco Barto de Menezes">
+                <button class="achaCepBtt">Consultar</button>
+                <button class="procuraRua">Pesquisar com o CEP</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="resultado hidden" id="resultado"></div>
+
+    <div class="footer"> Criado com <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4792595-9766-49a4-b00f-c6c2b9662c16/dcq5pnb-849537f2-40a3-47e2-81cf-19b4b6678096.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NzkyNTk1LTk3NjYtNDlhNC1iMDBmLWM2YzJiOTY2MmMxNlwvZGNxNXBuYi04NDk1MzdmMi00MGEzLTQ3ZTItODFjZi0xOWI0YjY2NzgwOTYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dxlfWUx2yyMqFWvTOg7g4P062O5fpo6ZqhonUbd1UKg" alt="heart"> e café por Hebert - 10/10/2021 </div>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

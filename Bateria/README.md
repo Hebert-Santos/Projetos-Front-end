@@ -1,0 +1,1 @@
+Aplicação simulando o instrumento musical bateria. Os sons são tocados através do click em teclas específicas feitas pelo cliente ou através da informação da sequência de teclas desejadas, havendo um campo específico para essa entrada de dados.

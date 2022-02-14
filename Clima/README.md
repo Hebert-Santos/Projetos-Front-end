@@ -1,0 +1,1 @@
+Site responsável por fazer a consulta do clima em determinada cidade à escolha do cliente. Os dados são recebidos e tratados através da API do OpenWeathermap

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Elétrica</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" type="imagem/png" href="iconfinder-weather-weather-forecast-lightning-storm-energy-3859139_121230.ico" />
+    </head>
+    
+    <body>
+        <!-- Puxando o Js-->
+        <script type="text/javascript" src="main.js"></script>
+        <!--titulo-->
+        <h1> Bem-Vindo a Calculadora de eletricidade </h1>
+        <br>
+        <!--Seleciona opções-->
+        <select name="selecionarCalculo" class="selCalc" onchange="menu(this.value)">
+            <option>Escolha uma opção</option>
+            <option value="1">Calculo de Tensão</option>
+            <option value="2">Calculo de Resistência</option>
+            <option value="3">Calculo de Corrente</option>
+            <option value="4">Calculo de Potência possuindo tensão e corrente</option>
+            <option value="5">Calculo de Potência possuindo Resistência e corrente ao quadrado</option>
+            <option value="6">Calculo de Potência possuindo tensão ao quadrado e resistência</option>
+            <option value="7">Calculo de Potência possuindo energia em Joule e tempo em segundos</option>
+            <option value="8">Calculo de Potência em KW possuindo energia em kwh e tempo em horas</option>
+            <option value="9">Calculo de Energia em joule</option>
+            <option value="10">Calculo de Energia em kWh</option>
+            <option value="11">Calculo de tempo em segundos, possuindo energia em j e potencia em w</option>
+            <option value="12">Calculo de tempo em horas, possuindo energia em kwh e potencia em kw</option>
+            <option value="13">Calculo de resistência equivalente entre dois resistores em paralelo</option>
+            <option value="14">Calculo de resistência equivalente de resistores em série</option>
+            <option value="15">Calculo de resistência equivalente de resistores em paralelo(3 ou +)</option>
+       </select>
+            <button class="limpa"  onclick="limpar()">Limpar</button>
+            <br>
+            <br>
+            <!--Linha separando as opções dos calculos-->
+            <div id="separador"></div>
+            <br>
+            <!--Mostra resultados-->
+            <div class="calcPlace">
+            </div>
+    </body>
+</html>

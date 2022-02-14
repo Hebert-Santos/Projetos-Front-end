@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    transition: 0.6s all;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+figcaption{
+    overflow-y: hidden;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .menu_header{    
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    min-width: 100vw;
+    height: 10%;
+    padding: 40px;
+    z-index: 1000;
+    background: #fff;
+    overflow-y: hidden;
+}
+
+.menu .menu_header .itens .switch-btn{
+    display: none;
+}
+
+.menu .menu_header h1{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.menu .menu_header .itens a{
+    text-decoration: none;
+    padding-right: 20px;
+    color: black;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+.menu .menu_header .itens button{
+    background-color: transparent;
+    border: none;
+}
+
+.container_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100vh;
+    background: url('./public/img/bg3-b1.webp');
+    background-size: cover;
+}
+
+.menu .transparente,  .menu .transparente .itens a, .menu .transparente .menu_title h1{
+    background:transparent;
+    color: white;
+}
+
+.menu .transparente .itens button:active, .menu .menu_header .itens button:active{
+    transform: translateY(8px);
+}
+
+.container_1 .content_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container_1 .content_1 .texto_1{
+    color: white;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_2 .content_2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.container_2 .content_2 .texto_2{
+    width: 900px;
+    text-align: justify;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+.container_2 .content_2 .imagens_2 img{
+    padding: 10px 80px;
+}
+
+/*Artistas*/
+.container_3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url('./public/img/bg-artistas.jpg');
+    background-size: cover;
+}
+
+.container_3 .title3 {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_4, 
+.container_6{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.container_4 .texto_4, 
+.container_5 .texto_5, 
+.container_6 .texto_6{
+    width: 900px;
+    text-align: justify;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+.container_4 .imagens4, 
+.container_6 .imagens6{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background-image: url('./public/img/wall5.jpg');
+    background-size: cover;
+}
+
+.container_4 .imagens4 .box, 
+.container_6 .imagens6 .box{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 500px;
+    height: 400px;
+}
+
+.container_4 .imagens4 .box img, 
+.container_6 .imagens6 .box img{
+    width: 350px;
+    height: 250px;
+    transform : scale( 0.9 );
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 10px;
+}
+
+.container_4 .imagens4 .box img:hover{
+    transform : scale( 1 );
+}
+
+
+.container_5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.container_5 .imagens5{
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url('./public/img/wall6.jpg');
+    background-size: cover;
+}
+
+.container_5 .imagens5 .box{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 500px;
+    height: 400px;
+}
+
+.container_5 .imagens5 .box img{
+    width: 350px;
+    height: 250px;
+    transform : scale( 0.9 );
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 10px;
+}
+
+.container_5 .imagens5 .box img:hover, 
+.container_6 .imagens6 .box img:hover{
+    transform : scale( 1 );
+}
+
+.container_7 {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container_7 > .imagens {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_7 > .imagens > .img_box {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.container_7 > .imagens > .img_box > .descricao{
+    width: 900px;
+    padding: 20px;
+}
+
+.container_7 > .imagens > .img_box > img{
+    width: 600px;
+    height: 500px;
+}
+
+footer{
+    min-width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    background: #000;
+}
+
+.titleContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+audio{
+    padding: 0px 20px;
+}
+/*Fim artista*/
+
+
+@media screen and (max-width: 1000px) {
+
+    *{
+        text-align: left;
+    }
+
+    .menu .menu_header .itens button{
+        display: none;
+    }
+
+    .menu .menu_header .itens a{
+        padding: 0;
+    }
+
+    .menu .menu_header .itens .switch-btn{
+        display: flex;
+        color: black;
+    }
+
+    .menu .menu_header .itens .switch-btn:active{
+        transform: translateY(0px);
+    }
+
+    .menu .transparente .itens .switch-btn{
+        display: flex;
+        color: white;
+    }
+
+    .menu .menu_header .mostrar, .menu .transparente .mostrar{
+        transition: none;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+        position: fixed;
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu .menu_header .mostrar button, .menu .transparente .mostrar button {
+        display: flex;
+    }
+
+    .menu .menu_header .mostrar a, .menu .transparente .mostrar a, .menu .transparente .mostrar h1{
+        color: black;
+    }
+
+    img, figcaption{
+        width: 100%;
+        padding: 10px 80px ;
+    }
+
+    .container_4, .container_5, .container_6{
+        flex-wrap: wrap;
+    }
+
+    .container_4 .imagens4 .box img, .container_5 .imagens5 .box img,.container_6 .imagens6 .box img{
+        box-shadow: none;
+        width: 450px;
+        height: 250px;
+        padding: 10px 80px;
+    }
+
+    .container_1 .content_1 .texto_1, .container_2 .content_2 .texto_2, .container_4 .texto_4, .container_5 .texto_5, .container_6 .texto_6{
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .container_7 > .imagens > .img_box {
+        flex-direction: column;
+    }
+
+    .container_7 > .imagens > .img_box > .descricao{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Treinamento Exemplo</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./public/icons/index_icon.png">
+</head>
+
+<body>
+    <header>
+        <a href="#banner" class="logo">Centro de Treinamento <span>Exemplo</span></a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu()">Início</a></li>
+            <li><a href='#about' onclick="toggleMenu()">Sobre nós</a></li>
+            <li><a href="#aulas" onclick="toggleMenu()">Aulas</a></li>
+            <li><a href="#professores" onclick="toggleMenu()">Professores</a></li>
+            <li><a href="#avaliacoes" onclick="toggleMenu()">Avaliações</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+        </ul>
+    </header>
+
+    <!--Inicio-->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Evolua sua luta</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, consequatur natus quod itaque nostrum
+                facere tenetur excepturi ea laborum ipsam hic nulla atque recusandae? Ad soluta doloribus quis laborum
+                suscipit.
+            </p>
+            <a href="#aulas" class="btn">Aulas</a>
+        </div>
+    </section>
+    <!--Fim inicio-->
+
+    <!--Sobre-->
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>S</span>obre nós</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis nesciunt aperiam esse
+                    dignissimos? Animi porro, iste sint cumque magni debitis perspiciatis doloremque dolorum quas
+                    aliquid recusandae quod vel accusamus. <br><br> Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. In fugit, dicta numquam ullam amet voluptatum aut! Laborum autem omnis
+                    eligendi dicta, quaerat cum minima perspiciatis labore cumque asperiores delectus eius.Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Explicabo quis nesciunt aperiam esse
+                    dignissimos? Animi porro, iste sint cumque magni debitis perspiciatis doloremque dolorum quas
+                    aliquid recusandae quod vel accusamus. <br><br> Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. In fugit, dicta numquam ullam amet voluptatum aut! Laborum autem omnis
+                    eligendi dicta, quaerat cum minima perspiciatis labore cumque asperiores delectus eius.</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="./public/imgs/about.webp">
+                    <!--Consertar o sub dps-->
+                    <sub> <a
+                            href="https://globoesporte.globo.com/eu-atleta/noticia/o-que-e-muay-thai-historia-da-luta-e-beneficios-do-treinamento-de-boxe-tailandes.ghtml">O
+                            tailandês Nong-O Gaiyanghadao, multicampeão de muay thai, em ação — Foto: Divulgação/ONE
+                        </a></sub>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Fim sobre-->
+
+    <!--Aulas-->
+    <section class="aulas" id="aulas">
+        <div class="title">
+            <h2 class="titleText"><span>N</span>ossas aulas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/figther3.jpg">
+                </div>
+                <div class="text">
+                    <h3>Aperfeiçoamento de técnica</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/condicionamento.jpg">
+                </div>
+                <div class="text">
+                    <h3>Condicionamento físico</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/disciplina.jpg">
+                </div>
+                <div class="text">
+                    <h3>Disciplina e concentração</h3>
+                </div>
+            </div>
+            <div class="title">
+                <h2 class="titleText">Horários</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            </div>
+            <div class="content">
+                <div class="box">
+                    <div class="text">
+                        <h3>Personalizado</h3>
+                        <br>
+                        <p>Entre em contato para combinarmos o melhor horário e preço para você.</p>
+                        <br>
+                        <a href="#contact" class="btn">Contato</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h3>Terça - Quinta</h3>
+                        <br>
+                        <p>Horário Feminino :<br> 18:00 às 19:30</p>
+                        <br>
+                        <p>Horário Misto :<br> 19:30 às 20:30</p>
+                        <br>
+                        <p>Preço :<br> R$80,00 por mês</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <h3>Segunda - Quarta - Sexta</h3>
+                        <br>
+                        <p>Horário Feminino :<br> 18:00 às 19:30</p>
+                        <br>
+                        <p>Horário Misto :<br> 19:30 às 20:30</p>
+                        <br>
+                        <p>Preço :<br> R$80,00 por mês</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--Fim aulas-->
+    <!--Professores-->
+    <section class="professores" id="professores">
+        <div class="title">
+            <h2 class="titleText"><span>P</span>rofessores</h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://cdn.asianmma.com/wp-content/uploads/2020/05/Superbon-winner.jpg">
+                </div>
+                <div class="text">
+                    <h3>Superbon Banchamek</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://cdn.asianmma.com/wp-content/uploads/2020/07/Superlek.jpg">
+                </div>
+                <div class="text">
+                    <h3>Superlek Kiatmoo9</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Fim professores-->
+
+    <!--Avaliações-->
+    <section class="avaliacoes" id="avaliacoes">
+        <div class="title white">
+            <h2 class="titleText">O que dizem sobre nós </h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/aval1.jpg">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate rem eligendi tempora,
+                        possimus, voluptates a labore nesciunt non dignissimos tenetur dolores debitis quos quod
+                        explicabo consequuntur? Rem expedita amet facere.</p>
+                    <h3>Buakaw</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/aval2.jpg">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officiis possimus odio rerum
+                        dolores impedit quae veniam similique eum doloribus ad adipisci, amet ducimus alias numquam
+                        error delectus in? Adipisci?</p>
+                    <h3>Saenchai</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./public/imgs/aval3.jpg">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda autem esse incidunt hic!
+                        Nesciunt possimus delectus placeat molestiae consectetur explicabo ipsa, reprehenderit
+                        veritatis facilis nostrum, perferendis dicta eius doloremque alias?</p>
+                    <h3>Alexis Rufus</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Fim avaliações-->
+
+    <!--Contato-->
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>F</span>ale conosco</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+        <!--Provavelmente eu não vou usar-->
+        <div class="contactForm">
+            <h3>Mande uma mensangem</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="nome">
+            </div>
+
+            <div class="inputBox">
+                <input type="email" placeholder="email">
+            </div>
+
+            <div class="inputBox">
+                <textarea placeholder="Digite sua mensagem"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </section>
+
+    <!--Fim contato-->
+
+    <div class="copyrightText">
+        <p>Copyright Hebert dos Santos Almeida. Todos os direitos reservados.</p>
+    </div>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header')
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle')
+            const navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>

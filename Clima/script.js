@@ -24,6 +24,24 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
             clearInfo()
             showWarning('Não encontramos essa localização')
         }
+
+        //Mudar a cor do botão e do resultado dependendo da temperatura
+        if(json.main.temp>30){
+            document.querySelector(".busca button").style.background="rgba(255, 0, 0, 0.700)";
+            document.querySelector(".resultado").style.background="rgba(255, 0, 0, 0.700)";
+        }
+        if(json.main.temp<=29.99){
+            document.querySelector(".busca button").style.background="rgba(255, 60, 0, 0.700)";
+            document.querySelector(".resultado").style.background="rgba(255, 60, 0, 0.700)";
+        }
+        if(json.main.temp<=23.99){
+            document.querySelector(".busca button").style.background="rgba(1, 94, 201, 0.700)";
+            document.querySelector(".resultado").style.background="rgba(1, 94, 201, 0.700)";
+        }
+        if(json.main.temp<=15.99){
+            document.querySelector(".busca button").style.background="rgba(85, 201, 255, 0.700)";
+            document.querySelector(".resultado").style.background="rgba(85, 201, 255, 0.700)";
+        }
     }
 
 }) //Previne o enviamento do formulário
@@ -44,6 +62,7 @@ function showInfo(json) {
     document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle - 90}deg)`
 
     document.querySelector('.resultado').style.display = 'block'   
+    
 }
 
 function clearInfo(){
